@@ -1,6 +1,5 @@
 function getHeaders() {
   const OPENAI_API_KEY = process.env.NEXT_PUBLIC_OPENAI_API_KEY;
-  console.log(OPENAI_API_KEY);
   const headers = new Headers();
   headers.append("Content-Type", "application/json");
   headers.append("Authorization", `Bearer ${OPENAI_API_KEY}`);

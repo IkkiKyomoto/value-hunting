@@ -17,7 +17,6 @@ export default function ValuesCheckForm({ values }: { values:string[] }) {
             return `criteria=${criterion}`
           }
           ).join('&')
-          console.log(queryLine)
           router.push(`/value/result?${queryLine}`)
     }
 

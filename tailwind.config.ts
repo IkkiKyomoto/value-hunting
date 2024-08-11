@@ -16,6 +16,6 @@ const config: Config = {
       },
     },
   },
-  plugins: [new MiniCssExtractPlugin()],
+  plugins: [],
 };
 export default config;
