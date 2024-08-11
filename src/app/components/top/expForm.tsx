@@ -4,20 +4,28 @@ import React, { useState } from "react";
 import AddIcon from "@mui/icons-material/Add";
 import {useRouter} from 'next/navigation'
 import { extractValue } from "@/app/util/data";
+import SubmitButton from "../common/submitButton";
 
+function ExpInput({id} : {id: string}) {
+  return (
+    <div className="border-2 w-full mt-5">
+      <input id={id} type="text" name="exp" placeholder="ここにあなたの経験を入力しましょう" className="w-full"/>
+    </div>
+  );
+}
 
 export default function ExpForm() {
   const [inputs, setInputs] = useState([
-    <div key={0}>
-      <input type="text" id="exp0" name="exp" />
-    </div>,
+    <div key={'0'}>
+     <ExpInput id={'0'}/>
+    </div>
   ]);
   const router = useRouter()
   function handleAddClick() {
     const newInputs = inputs.concat(
-      <div key={inputs.length}>
-        <input type="text" id={`exp${inputs.length}`} name="exp" />
-      </div>,
+      <div key={inputs.length.toString()}>
+        <ExpInput id={inputs.length.toString()}/>
+      </div>
     );
     setInputs(newInputs);
   }
@@ -36,7 +44,6 @@ export default function ExpForm() {
       return `values=${value}`
     }
     ).join('&')
-    console.log(queryLine)
     router.push(`/value?${queryLine}`)
 
   }
@@ -44,20 +51,19 @@ export default function ExpForm() {
   return (
     <form onSubmit={handleSubmit}>
       <div>
-        <label>経験を入力</label>
         {inputs}
       </div>
       <div>
         <div>
-          <p>
-            <span onClick={handleAddClick}>
-              <AddIcon />
+          <p className="mt-5 text-center">
+            <span onClick={handleAddClick} className="inline-block">
+              <AddIcon/>
               経験を追加
             </span>
           </p>
         </div>
       </div>
-      <button type="submit">送信する</button>
+      <SubmitButton />
     </form>
   );
 }
