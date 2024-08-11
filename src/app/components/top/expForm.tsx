@@ -52,7 +52,7 @@ export default function ExpForm() {
     });
     if (exps.length === 0) {
       event.currentTarget.submitButton.disabled = false;
-      setErrorMessage("最低1つ入力してください");
+      setErrorMessage("1つ以上入力してください");
       return;
     }
     const expsLine = exps.join(",");
