@@ -10,6 +10,7 @@ import SubmitButton from "../common/submitButton";
 export default function ValuesCheckForm({ values }: { values: string[] }) {
   const maxCheckedValues = 3;
   const [checkedValues, setCheckedValues] = useState<string[]>([]);
+  console.log(checkedValues);
   const [errorMessage, setErrorMessage] = useState<string>("");
   const router = useRouter();
   async function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
@@ -62,7 +63,7 @@ export default function ValuesCheckForm({ values }: { values: string[] }) {
               key={index}
               control={
                 <Checkbox
-                  name={`checkbox`}
+                  name={value}
                   className="checkbox"
                   color="primary"
                   onChange={handleChange}
