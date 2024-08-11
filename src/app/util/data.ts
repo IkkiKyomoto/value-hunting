@@ -56,7 +56,7 @@ export async function extractValue(exps: string) {
 
 export async function sendValue(valuesLine: string) {
   const systemMessage =
-    "これから、あなたにはある就活生が持つ価値がコンマ区切りで与えられます。価値のそれぞれを企業に対し求める基準へと変換し、フォーマットにしたがって返してください。なお回答は最大で3つまでとします。";
+    "これから、あなたにはある就活生が持つ価値がコンマ区切りで与えられます。価値のそれぞれを企業選びの軸へと変換し、フォーマットにしたがって返してください。企業選びの軸は、就活生が求める会社の特性のことです。例えば、ある就活生がチームワークに価値を置いている場合、その人の企業選びの軸はチームワークで仕事をする文化がある、になるでしょう。なお回答は最大で3つまでとします。";
   const headers = getHeaders();
   const body = JSON.stringify({
     temperature: 0.8,
