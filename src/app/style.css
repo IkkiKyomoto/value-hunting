@@ -1,0 +1,100 @@
+.page {
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+}
+
+.page .div-2 {
+  background-color: #ffffff;
+  height: 800px;
+  position: relative;
+  width: 330px;
+}
+
+.page .header-instance {
+  background-color: transparent !important;
+  left: 6px !important;
+  position: absolute !important;
+  top: 0 !important;
+}
+
+.page .design-component-instance-node {
+  border-color: var(--system-colors-overlays-default) !important;
+}
+
+.page .header-2 {
+  color: var(--system-colors-miscellaneous-keyboard-emoji-mic) !important;
+  font-family: "Abel-Regular", Helvetica !important;
+  font-size: 17px !important;
+  font-style: unset !important;
+  font-weight: 400 !important;
+  letter-spacing: -0.43px !important;
+  line-height: 22px !important;
+  margin-top: -0.33px !important;
+}
+
+.page .frame {
+  height: 254px;
+  left: 22px;
+  overflow: hidden;
+  position: absolute;
+  top: 56px;
+  width: 255px;
+}
+
+.page .text-wrapper-2 {
+  color: #000000;
+  font-family: var(--body-base-font-family);
+  font-size: var(--body-base-font-size);
+  font-style: var(--body-base-font-style);
+  font-weight: var(--body-base-font-weight);
+  left: 0;
+  letter-spacing: var(--body-base-letter-spacing);
+  line-height: var(--body-base-line-height);
+  position: absolute;
+  text-align: center;
+  top: 8px;
+  width: 104px;
+}
+
+.page .input-field-instance {
+  left: 8px !important;
+  position: absolute !important;
+  top: 42px !important;
+}
+
+.page .input-field-2 {
+  margin-top: -1px !important;
+}
+
+.page .text-wrapper-3 {
+  color: #000000;
+  font-family: var(--single-line-body-base-font-family);
+  font-size: var(--single-line-body-base-font-size);
+  font-style: var(--single-line-body-base-font-style);
+  font-weight: var(--single-line-body-base-font-weight);
+  left: 68px;
+  letter-spacing: var(--single-line-body-base-letter-spacing);
+  line-height: var(--single-line-body-base-line-height);
+  position: absolute;
+  top: 97px;
+  width: 252px;
+}
+
+.page .size-48 {
+  height: 28px !important;
+  left: 29px !important;
+  position: absolute !important;
+  top: 90px !important;
+  width: 26px !important;
+}
+
+.page .button-instance {
+  display: flex !important;
+  left: 34px !important;
+  position: absolute !important;
+  top: 142px !important;
+  width: 190px !important;
+}
