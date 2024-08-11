@@ -26,6 +26,7 @@ export async function createPost(post: Post) {
 export async function getPostByDate() {
   const perPage = 10;
   const prisma = new PrismaClient();
+
   const resPosts: Post[] = await prisma.post.findMany({
     select: {
       id: true,
