@@ -15,7 +15,7 @@ export default function Page({
       <p>あなたの企業選びの軸は…</p>
       <ValueDisplay criteria={criteria} />
       <div>
-        <MyCriteriaForm criteria={criteria}/>
+        <MyCriteriaForm criteria={criteria} />
       </div>
       <p className="mt-5 text-center">
         <Link className="border-b-2" href={"/"}>

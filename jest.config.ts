@@ -6,6 +6,13 @@
 import type { Config } from "jest";
 
 const config: Config = {
+  preset: "ts-jest",
+  transformIgnorePatterns: ["/node_modules/(?!three/examples/)"],
+  transform: {
+    "node_modules/three/examples/.+.(j|t)sx?$": "ts-jest",
+  },
+  globalSetup: "./src/test/setup.ts",
+  testEnvironment: "node", // or jest-environment-jsdom
   // All imported modules in your tests should be mocked automatically
   // automock: false,
 

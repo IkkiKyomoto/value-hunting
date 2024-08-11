@@ -40,18 +40,16 @@ export default function ExpForm() {
   async function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
     event.preventDefault();
     event.currentTarget.submitButton.disabled = true;
-      
+
     const expsInputs = document.getElementsByName("exp");
 
     const exps: string[] = [];
 
     expsInputs.forEach((expInput) => {
-
       if ((expInput as HTMLInputElement).value !== "") {
         exps.push((expInput as HTMLInputElement).value);
       }
     });
-    console.log(exps);
     if (exps.length === 0) {
       event.currentTarget.submitButton.disabled = false;
       setErrorMessage("最低1つ入力してください");
@@ -78,12 +76,20 @@ export default function ExpForm() {
 
   return (
     <form onSubmit={handleSubmit}>
-      {errorMessage && <p className="text-red-500" id="error">{errorMessage}</p>}
+      {errorMessage && (
+        <p className="text-red-500" id="error">
+          {errorMessage}
+        </p>
+      )}
       <div>{inputs}</div>
       <div>
         <div>
           <p className="mt-5 text-center">
-            <span id="add-input" onClick={handleAddClick} className="inline-block">
+            <span
+              id="add-input"
+              onClick={handleAddClick}
+              className="inline-block"
+            >
               <AddIcon />
               経験を追加
             </span>

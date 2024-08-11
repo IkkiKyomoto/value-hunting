@@ -10,7 +10,7 @@ export default async function Page({
   const values = searchParams["values"] as string[];
 
   return (
-    <div className="mx-4">
+    <div className="mx-4 mb-10">
       <h2 className={styles.h2}>経験を選択</h2>
       <p className="">あなたにとって重要な価値を最大3つ選択しましょう</p>
       <div>

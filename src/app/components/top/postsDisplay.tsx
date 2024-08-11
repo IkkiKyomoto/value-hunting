@@ -1,38 +1,40 @@
-'use client'
+"use client";
 
-import React, {useState} from 'react'
-import { Post } from '@/app/lib/definition'
+import React, { useState } from "react";
+import { Post } from "@/app/lib/definition";
 
-import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
-import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos';
-import PostCard from '@/app/components/top/postCard';
+import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
+import ArrowBackIosIcon from "@mui/icons-material/ArrowBackIos";
+import PostCard from "@/app/components/top/postCard";
 
-export default function PostsDisplay({posts} : {posts: Post[]}) {
+export default function PostsDisplay({ posts }: { posts: Post[] }) {
   const [currentIndex, setCurrentIndex] = useState(0);
-  console.log(currentIndex)
-  console.log(posts[currentIndex])
   return (
-
-      <div className="flex items-center justify-center space-x-4">
-        <button onClick={() => {
-          const prev = (currentIndex + posts.length - 1) % posts.length
-          setCurrentIndex((current) => prev)
-        }}>
+    <div className="flex items-center justify-center space-x-2">
+      <button
+        onClick={() => {
+          const prev = (currentIndex + posts.length - 1) % posts.length;
+          setCurrentIndex((current) => prev);
+        }}
+        className=""
+      >
         <ArrowBackIosIcon className="text-lg text-gray-600 hover:text-black" />
-        </button>
-        <div className="text-center">
-          <PostCard post={posts[currentIndex]} />
-        </div>
-        <button onClick={()=> {
-          const next = (currentIndex + 1) % posts.length
-
-          setCurrentIndex((current) => next)
-        }} >
-        <ArrowForwardIosIcon className="text-lg text-gray-600 hover:text-black" />
-        </button>
+      </button>
+      <div className="text-center">
+        <PostCard post={posts[currentIndex]} />
       </div>
+      <button
+        onClick={() => {
+          const next = (currentIndex + 1) % posts.length;
 
-  )
+          setCurrentIndex((current) => next);
+        }}
+        className=""
+      >
+        <ArrowForwardIosIcon className="text-lg text-gray-600 hover:text-black" />
+      </button>
+    </div>
+  );
 }
 
 /*
