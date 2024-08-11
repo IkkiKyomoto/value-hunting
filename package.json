@@ -8,9 +8,8 @@
     "build": "prisma generate & next build",
     "start": "next start",
     "lint": "next lint",
-    "test": "jest",
+    "test": "jest --silent=false --verbose false",
     "cypress": "cypress open"
-    
   },
   "dependencies": {
     "@babel/core": "^7.25.2",
@@ -34,6 +33,7 @@
     "react": "^18",
     "react-dom": "^18",
     "styled-components": "^6.1.12",
+    "ts-jest": "^29.2.4",
     "vercel": "^35.2.4"
   },
   "devDependencies": {

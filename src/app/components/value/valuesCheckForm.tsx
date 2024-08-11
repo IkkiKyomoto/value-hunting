@@ -50,7 +50,11 @@ export default function ValuesCheckForm({ values }: { values: string[] }) {
   }
   return (
     <form className="ml-5 mt-5" onSubmit={handleSubmit}>
-      {errorMessage && <p id="error" className="text-red-500">{errorMessage}</p>}
+      {errorMessage && (
+        <p id="error" className="text-red-500">
+          {errorMessage}
+        </p>
+      )}
       <FormGroup className="">
         {values.map((value, index) => {
           return (
