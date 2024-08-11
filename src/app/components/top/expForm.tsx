@@ -8,14 +8,14 @@ import { extractValue } from "@/app/util/data";
 
 export default function ExpForm() {
   const [inputs, setInputs] = useState([
-    <div>
+    <div key={0}>
       <input type="text" id="exp0" name="exp" />
     </div>,
   ]);
   const router = useRouter()
   function handleAddClick() {
     const newInputs = inputs.concat(
-      <div>
+      <div key={inputs.length}>
         <input type="text" id={`exp${inputs.length}`} name="exp" />
       </div>,
     );
