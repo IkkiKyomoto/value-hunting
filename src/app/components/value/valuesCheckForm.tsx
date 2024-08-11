@@ -23,7 +23,6 @@ export default function ValuesCheckForm({ values }: { values: string[] }) {
 
       return;
     }
-    event.currentTarget.submitButton.disabled = false;
     try {
       criteria = await sendValue(checkedValues.join(","));
     } catch (error) {
