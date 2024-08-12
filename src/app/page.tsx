@@ -13,7 +13,7 @@ export default async function Home() {
       <div>
         <h2 className={styles.h2}>みんなの企業選びの軸</h2>
         <Suspense fallback={"ロード中"}>
-          <PostsDisplay/>
+          <PostsDisplay />
         </Suspense>
       </div>
       <div className="mt-5">
