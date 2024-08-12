@@ -1,5 +1,6 @@
 "use client";
 
+// 投稿カード
 import React, { useState } from "react";
 import { Post } from "@/app/lib/definition";
 

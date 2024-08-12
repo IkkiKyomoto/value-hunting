@@ -1,5 +1,6 @@
 "use server";
 
+//サーバーサイドの処理
 import { Post } from "@/app/lib/definition";
 import { PrismaClient } from "@prisma/client";
 

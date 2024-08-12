@@ -1,5 +1,6 @@
 "use client";
 
+// 投稿フォーム
 import React, { useState } from "react";
 import SubmitButton from "@/app/components/common/submitButton";
 import { createPost } from "@/app/lib/action";

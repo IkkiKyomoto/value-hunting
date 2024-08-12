@@ -1,3 +1,5 @@
+// クライアントでのデータ取得処理
+
 function getHeaders() {
   const OPENAI_API_KEY = process.env.NEXT_PUBLIC_OPENAI_API_KEY;
   const headers = new Headers();

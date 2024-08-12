@@ -1,3 +1,5 @@
+// 価値を表示
+
 import React from "react";
 
 export default function ValueDisplay({ criteria }: { criteria: string[] }) {

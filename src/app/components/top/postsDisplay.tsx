@@ -1,5 +1,6 @@
 "use client";
 
+// 投稿表示
 import React, { useState, useEffect } from "react";
 import { Post } from "@/app/lib/definition";
 

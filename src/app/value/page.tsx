@@ -1,3 +1,5 @@
+//価値選択ページ
+
 import React from "react";
 import ValuesCheckForm from "@/app/components/value/valuesCheckForm";
 import styles from "@/app/common.module.css";

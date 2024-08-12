@@ -1,3 +1,5 @@
+// データ型の定義
+
 export type Criterion = {
   id?: string;
   content: string;
@@ -11,15 +13,3 @@ export type Post = {
   criteria: Criterion[];
   createdAt?: Date;
 };
-
-/*
-
-model Criterion {
-  id String @id @default(uuid())
-  content String
-  post Post @relation(fields: [postId], references: [id])
-  postId String
-  createdAt DateTime @default(now())
-}
-
-*/

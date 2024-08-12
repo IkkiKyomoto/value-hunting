@@ -1,3 +1,5 @@
+//　カスタム送信ボタン
+
 import React from "react";
 
 export default function SubmitButton({

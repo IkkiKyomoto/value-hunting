@@ -1,6 +1,7 @@
 import React from "react";
 import Link from "next/link";
 
+// ヘッダー
 export default function Header() {
   return (
     <div className="bg-amber-700 p-5 border-b-4 font-serif">

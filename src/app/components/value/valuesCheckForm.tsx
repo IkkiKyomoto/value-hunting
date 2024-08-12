@@ -1,5 +1,6 @@
 "use client";
 
+//価値入力フォーム
 import React, { useState } from "react";
 import Checkbox from "@mui/material/Checkbox";
 import { FormControlLabel, FormGroup } from "@mui/material";

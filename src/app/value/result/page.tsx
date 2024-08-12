@@ -1,3 +1,5 @@
+// 結果表示画面
+
 import React from "react";
 import ValueDisplay from "@/app/components/value/result/valueDisplay";
 import Link from "next/link";
